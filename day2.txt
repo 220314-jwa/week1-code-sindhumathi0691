@@ -1,52 +1,61 @@
-public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+package revature_sindhu_classroom; // package created as "revature_ sindhu_classroom"
 
-	String[] foodsOfMyType = getFoodsByType(myType);
-	
-	for (String food : foodsOfMyType) {
-		System.out.println(food);
+public class Day2switchcase { // class has been created as "Day2switchcase"  
+
+	public static void main(String[] args) {
+		
+			String[] foodTypes = getFoodTypes();// calling method as "FoodTypes" from  "getFoodTypes" 
+			String myType = foodTypes[1]; // initialization of the type of food in string- here we selected "lunch"   
+
+			String[] foodsOfMyType = getFoodsByType(myType);
+			
+			for (String food : foodsOfMyType) { // This is an enhanced for loop - for looping each values in an array we using this.
+				System.out.println(food);
+			}
+		}
+
+		public static String[] getFoodTypes() { //creating "getFoodTypes" method as string array.
+			String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"}; // creating string array as 'foodTypes' and assigning value in it.
+			return foodTypes;// return foodTypes to main  method
+			}
+
+		public static String[] getFoodsByType(String type) {
+			String[] foods = new String[3];// creating "foods" string array  
+// since we selected foodTypes[1] so output will be "lunch - sandwich, salad,soup"
+			switch(type) {
+			case "breakfast":
+				foods[0] = "pancakes";
+				foods[1] = "cereal";
+				foods[2] = "omelette";
+				break;
+			case "lunch":
+				foods[0] = "sandwich";
+				foods[1] = "salad";
+				foods[2] = "soup";
+				break;
+			case "dinner":
+				foods[0] = "curry";
+				foods[1] = "stir fry";
+				foods[2] = "burger";
+				break;
+			case "dessert":
+				foods[0] = "cake";
+				foods[1] = "ice cream";
+				foods[2] = "candy";
+				break;
+			case "snack":
+				foods[0] = "chips";
+				foods[1] = "apple";
+				foods[2] = "samosa";
+				break;
+			default:
+				// add your own
+				break;
+			}
+
+			return foods;
+		}
+
 	}
-}
 
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
-}
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
-
-	switch(type) {
-	case "breakfast":
-		foods[0] = "pancakes";
-		foods[1] = "cereal";
-		foods[2] = "omelette";
-		break;
-	case "lunch":
-		foods[0] = "sandwich";
-		foods[1] = "salad";
-		foods[2] = "soup";
-		break;
-	case "dinner":
-		foods[0] = "curry";
-		foods[1] = "stir fry";
-		foods[2] = "burger";
-		break;
-	case "dessert":
-		foods[0] = "cake";
-		foods[1] = "ice cream";
-		foods[2] = "candy";
-		break;
-	case "snack":
-		foods[0] = "chips";
-		foods[1] = "apple";
-		foods[2] = "samosa";
-		break;
-	default:
-		// add your own
-		break;
-	}
-
-	return foods;
-}

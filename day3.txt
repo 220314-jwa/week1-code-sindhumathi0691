@@ -1,24 +1,29 @@
-public class Food {
-	public String name;
-	public String type;
+package revature_sindhu_classroom;
 
-	public Food(String name, String type) {
-		this.name = name;
+public class Food2 { // declaring a class  variable here
+
+	public String name;  
+	public String type;  
+	
+	
+	public static void main(String[] args) {
+		
+		Food2 myFood = new Food2("potato", "vegetable"); // creating instance inside main method and passing parameters here
+		myFood.cook(); 
+		System.out.println(myFood.name); 
+		
+	}		
+	public Food2(String name, String type) { 
+		this.name = name;   //  the "name", "type"here represents  which is string "name" of class Food2
 		this.type = type;
 	}
-
-	public void cook() {
-		if (!name.contains("cooked")) {
+	
+	public void cook() {        // void don't  return anything 
+		if (!name.contains("cooked")) {    // !is not contains cooked
 			name = "cooked " + name;
 		}
 	}
-}
+}	// in this program declaration 	of class variable of string name, type (Food2) and under the main method 
+ // creating a instance and passing parameters in Food2 method "this" keyword is assigning value to the class
+//variable  and in the void cook we will get a output as "cooked potato"
 
-public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
-
-		System.out.println(myFood.name);
-	}
-}

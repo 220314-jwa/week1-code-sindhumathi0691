@@ -1,4 +1,3 @@
-
 package sindhu_revature;
 
 public class sindhuifelse {
@@ -28,5 +27,6 @@ System.out.println(result);
 
 }
 }
+
 
 

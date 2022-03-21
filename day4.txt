@@ -1,18 +1,23 @@
-public class Main {
-	public static void main(String[] args) {
-		Javalin app = Javalin.create();
-                                         // start up the server (start listening for HTTP requests)
-		
+ppackage revature_sindhu_classroom;
+import io.javalin.Javalin; // import javalin
+public class Javalinday4 {  //declaration of class javalinday4
 
-                                             app.start();
-                                     
-                                                    // tell the Javalin object how to respond to specific requests:
-		// how to respond to a GET request where the URI ends with "/hello"
-		
-                                            // request with method GET and URI path /pets
-                                       app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
-			ctx.result("You got: " + myFood.name);
-		});
+	public static void main(String[] args) {
+		class Main {
+			public void main(String[] args) {
+				Javalin app = Javalin.create();	  // start up the server (start listening for HTTP requests)
+				       app.start();
+		                                     
+		       // tell the Javalin object how to respond to specific requests:
+				// how to respond to a GET request where the URI ends with "/foods"
+						      	            
+		       app.get("foods", ctx -> {
+					Food myFood = new Food("carrots", "vegetable"); // creating instance
+					ctx.result("You got: " + myFood.name);  // context result
+				});
+			}
+		}
+
 	}
+
 }

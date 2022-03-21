@@ -1,8 +1,4 @@
-package revature_sindhu_classroom; // package created as "revature_ sindhu_classroom"
-
-public class Day2switchcase { // class has been created as "Day2switchcase"  
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 			String[] foodTypes = getFoodTypes();// calling method as "FoodTypes" from  "getFoodTypes" 
 			String myType = foodTypes[1]; // initialization of the type of food in string- here we selected "lunch"   
@@ -57,5 +53,3 @@ public class Day2switchcase { // class has been created as "Day2switchcase"
 		}
 
 	}
-
-

@@ -1,25 +1,20 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
-		</form>
-	</body>
-</html>
-
+</head>                                                                                                                                                                     \\  head  tag
+	<body>                                                                                                                                                     //  content of the Html document.
+		<h1>Cook your food!</h1>                                                                                                   // header tag h1
+		<form action="http://localhost:8080/cook">                                                                        \\  user input  tag in order  to send to a server.
+		<form action="http://localhost:8080/cook">                                                                    
+			<label for="foodName">Food Name:</label>                                                 // for labelling the input increases usability
+			<input id="foodName" name="foodName" type="text">                                 \\  specifies an input field with text type where  user can enter data.  
+			<br> \\ line break(tag)
+			<button type="submit">Submit</button>                                                              // "submit" button tag
+		</form>                                                                                                                                            \\ closing form tag
+	</body>                                                                                                                                                        //closing body tag
+</html>                                                                                                                                                                                   //closing  html tag
 public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
-
-	app.get("cook", ctx -> {
+	Javalin app = Javalin.create();                                                                                                                      // created an object of Javalin
+	app.start();                                                                                                                                                    \\  The app is listening for http requests.
+	app.get("cook", ctx -> {                                                                                                                              // setting to the path "cook" get handler.
 		String foodSent = ctx.formParam("foodName");
 		String cookedFood = "cooked " + foodSent;
-		ctx.result("Here's your food! <br>" + cookedFood);
+		ctx.result("Here's your food! <br>" + cookedFood);                                                 // context result
 	});
-}

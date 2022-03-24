@@ -1,13 +1,32 @@
+package sindhu_revature;
+
+public class sindhuifelse {
+
+	public static void main(String[] args) {
+
+// create a integer variable as "score" and assign with value as 80
 int score = 80;
 
+//create a empty string variable as "result"
 String result;
 
+//check if score value is equal to 80 and if yes then assign result variable as "you passed"
 if (score == 80) {
 	result = "You passed!";
+
+//check if score value is greater than 80 and if yes then assign result variable as "You did great"
 } else if (score > 80) {
 	result = "You did great!";
+
+//If the above 2 conditions failed  then assign result variable as "You did not pass. Try again"
 } else {
 	result = "You did not pass. Try again!";
+
+// Print the value in result variable to console output
+System.out.println(result);
+
+}
 }
 
-System.out.println(result);
+
+
